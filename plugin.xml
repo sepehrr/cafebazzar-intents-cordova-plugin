@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
+    id="CafeBazaar-intents-cordova-plugin" version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  
+  <name>CafeBazaar Intents Plugin for Cordova/Phonegap</name>
+  <description>A simple plugin for rate applications and view other apps of developer in CadeBazaar App Marketplace</description>
+  <license>MIT</license>
+
+  <js-module src="CafeBazaar.js" name="CafeBazaar">
+    <clobbers target="CafeBazaar" /> 
+  </js-module>
+  
+  <platform name="android">
+    <source-file src="CafeBazaar.java" target-dir="src/com/epsi/plugins/cordova" />
+    
+    <config-file target="res/xml/config.xml" parent="/*">
+	  <feature name="CafeBazaar" >
+	    <param name="android-package" value="com.epsi.plugins.cordova.CafeBazaar"/>
+	  </feature>
+	</config-file>
+    
+  </platform>
+  
+</plugin>
