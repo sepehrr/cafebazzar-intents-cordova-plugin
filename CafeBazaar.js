@@ -19,39 +19,15 @@
 function CafeBazaar() {
 }
 
-/**
- * Recognize speech and return a list of matches
- *
- * @param successCallback
- * @param errorCallback
- * @param reqCode User-defined integer request code which will be returned when recognition is complete
- * @param maxMatches The maximum number of matches to return. 0 means the service decides how many to return.
- * @param promptString An optional string to prompt the user during recognition
- */
+
 CafeBazaar.prototype.rateApp = function(successCallback, errorCallback, appPackage) {
     return cordova.exec(successCallback, errorCallback, "CafeBazaar", "rate-app", [{app:appPackage}]);
 };
 
-/**
- * Get the list of the supported languages in IETF BCP 47 format
- * 
- * @param successCallback
- * @param errorCallback
- *
- * Returns an array of codes in the success callback
- */
 CafeBazaar.prototype.viewApp = function(successCallback, errorCallback, appPackage) {
     return cordova.exec(successCallback, errorCallback, "CafeBazaar", "display-app", [{app:appPackage}]);
 };
 
-/**
- * Get the list of the supported languages in IETF BCP 47 format
- *
- * @param successCallback
- * @param errorCallback
- *
- * Return a String message with the result
- */
 CafeBazaar.prototype.viewDeveloperPage = function(successCallback, errorCallback,developerId) {
     return cordova.exec(successCallback, errorCallback, "CafeBazaar", "disp-developer", [{developer:developerId}]);
 };

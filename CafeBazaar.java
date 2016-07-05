@@ -36,35 +36,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
-/**
- * Style and such borrowed from the TTS and PhoneListener plugins
- */
+
 public class CafeBazaar extends CordovaPlugin {
     private static final String LOG_TAG = CafeBazaar.class.getSimpleName();
     private static int REQUEST_CODE = 1001;
 
-    // private CallbackContext callbackContext;
-    // private LanguageDetailsChecker languageDetailsChecker;
-
     //@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
-		// Boolean isValidAction = true;
-
-  //   	this.callbackContext= callbackContext;
-
-		// // Action selector
-  //   	if ("startRecognize".equals(action)) {
-  //           // recognize speech
-  //           startSpeechRecognitionActivity(args);     
-  //       } else if ("getSupportedLanguages".equals(action)) {
-  //       	getSupportedLanguages();
-  //       } else if ("checkSpeechRecognition".equals(action)) {
-  //       	checkSpeechRecognition();
-  //       } else {
-  //           // Invalid action
-  //       	this.callbackContext.error("Unknown action: " + action);
-  //       	isValidAction = false;
-  //       }
 
         if (action.equals("display-app")) {
             try {
